@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8d3d3;
+    background-image: url("sunset.jpg");
+    background-repeat: no-repeat;
+	background-position: 90% top;
+    height: 100vh;
+    background-size: cover;
+    }
+    
+    .heart {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(182, 58, 58);
+    position: relative;
+    transform: rotate(-45deg);
+    animation: beat 1s infinite;
+    }
+    
+    .heart::before,
+    .heart::after {
+    content: '';
+    width: 100px;
+    height: 100px;
+    background-color: rgb(182, 58, 58);
+    border-radius: 50%;
+    position: absolute;
+    }
+    
+    .heart::before {
+    top: -50px;
+    left: 0;
+    }
+    
+    .heart::after {
+    left: 50px;
+    top: 0;
+    }
+    
+    @keyframes beat {
+    0%, 100% {
+    transform: scale(1) rotate(-45deg);
+    }
+    50% {
+    transform: scale(1.1) rotate(-45deg);
+    }
+    }
